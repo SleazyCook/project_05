@@ -7,6 +7,7 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Landing from "./components/Landing";
 import Register from "./components/Register";
+import Details from "./components/Details";
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: "products",
                 element: <Products />
+            },
+            {
+                path: "products/:id",
+                element: <Details />
             },
             {
                 path: "home",
