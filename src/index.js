@@ -6,6 +6,7 @@ import ErrorPage from "./components/ErrorPage";
 import About from "./components/About";
 import Products from "./components/Products";
 import Landing from "./components/Landing";
+import Register from "./components/Register";
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "home",
                 element: <Landing />
+            },
+            {
+                path: "register",
+                element: <Register />
             }
         ]
     }
