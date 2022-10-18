@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+    color: green;
+    background-color: #1e1e1e;
+}
+
+header, footer {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    font-size: large;
+    margin: 1em;
+}
+
+
+#author {
+    font-family: 'Berkshire Swash';
+
+}
+/* Products page */
+#behold {
+    margin: 5px 5px 5px 5px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.products-page-container {
+    display: flex;
+    border: 5px solid green;
+}
+
+/* @media all and (max-width: 800x) {
+    .products-page-container {
+        background-color: white; 
+        flex-direction: column;
+    }
+} */
+
+.products-container {
+    border: 5px solid blue;
+}
+
+.product {
+    color: white;
+}
