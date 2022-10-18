@@ -34,6 +34,9 @@ const Products = () => {
                         </div>
                     }) : <p>No products to display at this time.<br></br><br></br> see you space cowboy... </p>
             } 
+            <div>
+                <p id="searchbar">Search Bar goes here</p>
+            </div>
             </div>
             <div className="new-post-container">
                 <p>New posts go here</p>

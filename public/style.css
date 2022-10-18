@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
-* {
+body {
     color: green;
     background-color: #1e1e1e;
 }
@@ -44,5 +44,15 @@ nav {
 }
 
 .product {
-    color: white;
+    color: lightblue;
+    border: 5px solid lightblue;
+    margin: 10px;
+}
+
+#searchbar {
+    color: pink;
+}
+
+.new-post-container {
+    color: red;
 }
