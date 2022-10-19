@@ -11,11 +11,10 @@ const Products = () => {
         <div className="products-page-container">
             
             <div className="products-container">
-                <div>
+                <div id="searchbar">
                     <input type="text" placeholder="Search products"></input>
                     <button type="submit">Search</button>
                 </div>
-                <p id="behold">Behold!! My Stuff</p>
                 {
                     ourProducts && ourProducts.length ? ourProducts.map((product, idx) => {
                         // console.log(product.title);
