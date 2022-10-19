@@ -6,7 +6,7 @@ const About = () => {
             <p id="about">
                 This is a fake e-commerce website designed by Drew Cook.
                 <br />
-                Drew was originally inspired to create a modern alternative to e-commerce after his Web Development instructor posted a project explicitly telling him to do so.
+                Drew was originally inspired to create a modern alternative to e-commerce after his Web Development instructor posted a project explicitly telling him to do this so.
                 <br />
                 Today Drew spends his days and nights debugging this very websites and others plagued by bugs just like it.
             </p>
