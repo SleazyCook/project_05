@@ -4,7 +4,7 @@ import {useOutletContext, Link} from "react-router-dom";
 
 const Products = () => {
     const ourProducts = useOutletContext(); //<--- new
-    console.log(ourProducts);
+    // console.log(ourProducts);
     //destructure data from api, use curly braces above
 
     return (
