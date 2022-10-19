@@ -20,7 +20,7 @@ const Homepage = () => {
     return (
         <div>
             <header>
-                <h1>Drew's E-Commerce Site</h1>
+                <h1>Drewford's List</h1>
             </header>
             <Navbar class="nav" />
             <Outlet context={ourProducts}/>
