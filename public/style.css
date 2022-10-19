@@ -1,20 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
+/* HOMEPAGE - HEADER, NAV, FOOTER */
 body {
     color: green;
     background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
 }
 
-header, footer {
+header {
     text-align: center;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: lightblue;
+    width: 400px;
+    margin: auto;
 }
 
 nav {
     text-align: center;
     font-size: large;
-    margin: 1em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: lightblue;
+    border-radius: 5px;
+    width: 250px;
+
 }
 
+footer {
+    text-align: center;
+}
 
 #author {
     font-family: 'Berkshire Swash';
@@ -44,9 +61,31 @@ nav {
 }
 
 .product {
-    color: lightblue;
-    border: 5px solid lightblue;
+    color: black;
+    background-color: lightgrey;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 8px;
     margin: 10px;
+}
+
+/* DETAILS PAGE */
+/* #details-container {
+    border: 5px solid red;
+} */
+
+.name-detail {
+    font-size: large;
+    text-decoration: underline;
+    color: black;
+}
+
+.price-detail {
+    color: darkgreen;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; */
+    font-size: large;
+    font-weight: bold;
 }
 
 #searchbar {

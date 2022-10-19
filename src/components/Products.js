@@ -9,27 +9,29 @@ const Products = () => {
 
     return (
         <div className="products-page-container">
+            
             <div className="products-container">
+                <div>
+                    <input type="text" placeholder="Search products"></input>
+                    <button type="submit">Search</button>
+                </div>
                 <p id="behold">Behold!! My Stuff</p>
                 {
                     ourProducts && ourProducts.length ? ourProducts.map((product, idx) => {
                         // console.log(product.title);
                         return <div className="product" key = {idx}>
-                            
-                            <p className="name-detail" >Product Name: <span id="product-name"><b>{product.title}</b></span></p>
-                            <p className="price-detail">Price: {product.price}</p>
-                            <Link to={`/products/${idx}`}>See More Details About {product.title}</Link> new line for details
-                            
-                            
+                            <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
+                            <p><span className="price-detail">{product.price}</span></p>
                         </div>
                     }) : <p>No products to display at this time.<br></br><br></br> SEE YOU SPACE COWBOY... </p>
             } 
-            <div>
-                <p id="searchbar">Search Bar goes here</p>
-            </div>
+            
             </div>
             <div className="new-post-container">
-                <p>New posts go here</p>
+                <p>Create a listing</p>
+                <input type="text" placeholder="item name"></input><br />
+                <input type="num" placeholder="$price"></input><br />
+                <input type="text" placeholder="description"></input>
             </div>
         </div>
     )

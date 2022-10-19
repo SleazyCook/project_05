@@ -6,11 +6,12 @@ const Details = () => {
   const product = ourProducts[id];
   console.log(product);
   return (
-    <div>
-      <p className="name-detail">Product Name: <span id="product-name"><b>{product.title}</b></span></p>
-      <p className="price-detail">Price: {product.price}</p>
-      <p className="seller-detail">Seller: {product.author.username}</p>
-      <p className="description-detail">Description: {product.description}</p>
+    <div className="product">
+      <p><span className="name-detail"><b>{product.title}</b></span></p>
+      <p><span className="price-detail">{product.price}</span></p>
+      <p>Seller: <span className="seller-detail"></span>{product.author.username}</p>
+      <p>Description: <span className="description-detail">{product.description}</span></p>
+      <button type="submit">Contact Seller</button>
     </div>
   )
 }
