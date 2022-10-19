@@ -1,9 +1,18 @@
 import React, {useState, useEffect} from "react";
 import Navbar from "./Navbar";
-import {Outlet} from "react-router-dom";
+import {Outlet } from "react-router-dom";
+// import {router} from "../index.js"
 
 const Homepage = () => {
-        const [ourProducts, setOurProducts] = useState([]);
+    const [ourProducts, setOurProducts] = useState([]);
+    const [isHome, setIsHome] = useState(true);
+    // useEffect(() =>{
+    //     if (window.location.pathname == "/") {
+    //         setIsHome(true);
+    //     } else {
+    //         setIsHome(false);
+    //     }
+    // }, [])
     useEffect(()=>{
         async function fetchProductData () {
             try {
@@ -17,14 +26,23 @@ const Homepage = () => {
         }
         fetchProductData();
     }, [])
+    // const handleIsHome = (event) => {
+    //     console.log(event.target)
+    //     if (event.target.textContent == 'Home') {
+    //     setIsHome(true) 
+    // } else { setIsHome(false)}}
     return (
-        <div>
+        <div 
+        // onClick={handleIsHome}
+        >
             <header>
                 <h1>Drewford's List</h1>
             </header>
-            <Navbar class="nav" />
-            <Outlet context={ourProducts}/>
-            {/*maybe a ternary to show the homepage image if not on products or about*/}
+                <Navbar className="nav" 
+                // isHome = {isHome} setIsHome = {setIsHome} 
+                />
+                <Outlet context={ourProducts}/>
+            {/* {isHome == true ? <p>Hello</p> : ''} */}
             <footer>
                 <p>Developed by <span id="author">Drewford</span></p>
             </footer>
