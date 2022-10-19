@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import {Outlet } from "react-router-dom";
 // import {router} from "../index.js"
 
-const Homepage = () => {
+const App = () => {
     const [ourProducts, setOurProducts] = useState([]);
     const [isHome, setIsHome] = useState(true);
     // useEffect(() =>{
@@ -50,4 +50,4 @@ const Homepage = () => {
     )
 }
 
-export default Homepage;
+export default App;

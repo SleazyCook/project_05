@@ -53,6 +53,20 @@ footer {
     font-family: 'Berkshire Swash';
 
 }
+/* Home Page----------------------------------- */
+#welcome-container {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#welcome {
+    font-size: xx-large;
+}
+
+#subwelcome {
+    font-size: x-large;
+}
+
 /* Products page------------------------------- */
 #behold {
     margin: 5px 5px 5px 5px;
@@ -120,4 +134,31 @@ footer {
     border-left: 5px solid white;
     padding: 1em;
     text-align: center;
+}
+
+/* About Page */
+#about-container {
+    display: flex;
+    border: 5px solid white;
+    border-radius: 5px;
+    background-color: #addafb;
+    width: 60vw;
+    max-width: 1000px;
+}
+
+#about {
+    color: #0162bc;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Registration Page */
+#register-container {
+    display: flex;
+    border: 5px solid white;
+    border-radius: 5px;
+    background-color: #addafb;
+    width: 60vw;
+    max-width: 1000px;
+    /* text-align: center; */
 }

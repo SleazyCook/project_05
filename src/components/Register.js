@@ -43,7 +43,7 @@ const Register = () => {
     }
     //onSubmit and onChange
     return (
-        <div>
+        <div id="register-container">
             <form onSubmit={formSubmitHandler}>
                 <label>Enter New Username Here: </label>
                 <input type="text" value={username} onChange={updateUserNameState}></input>
