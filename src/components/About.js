@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div>
             <p id="about">
-                We are a fake e-commerce site made by an asshole.
+                This is a fake e-commerce website designed by Drew Cook.
             </p>
         </div>
     )
