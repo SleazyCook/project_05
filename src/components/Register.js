@@ -12,7 +12,6 @@ const Register = () => {
             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/register",
                 {
                     method: "POST",
-                    mode: "cors",
                     headers: {
                         "Content-Type": "application/json"
                     },
@@ -25,6 +24,7 @@ const Register = () => {
                 }
             )
             const data = await response.json();
+
             if (data.success){
                 localStorage.setItem("token", data.data.token)
                 navigate('/products');

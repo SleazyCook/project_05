@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div id="welcome-container">
             <p id="welcome">Buy. Sell. Trade.</p>
-            <p id="subwelcome">A modern alternative to e-commerce that is above the rest.</p>
+            <p id="subwelcome">A modern alternative to e-commerce that floats above the rest.</p>
         </div>
     )
 }

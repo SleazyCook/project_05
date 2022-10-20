@@ -6,25 +6,40 @@ import {Outlet } from "react-router-dom";
 const App = () => {
     const [ourProducts, setOurProducts] = useState([]);
     const [currentProfile, setCurrentProfile] = useState({});
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     //useEffect, if there is a token in local storage, then run GET route /users/me
-    // useEffect (()=> {
-    //     if (token) {
-    //         async function fetchUserData () {
-    //             try {
-    //                 const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me", 
-    //                 {
-    //                     headers: {
-    //                         'Content-Type': 'application/json',
-    //                         'Authorization': 'Bearer TOKEN_STRING_HERE'
-    //                     },
-    //                 })
-    //                 const userData = await response.json();
-    //             } catch (error) {
-    //                 console.log(error)
-    //             }
-    //         }
-    //     }
-    // })
+    useEffect (()=> {
+        if (localStorage.getItem('token')) {
+            async function fetchUserData () {
+                try {
+                    const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me", 
+                    {
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        },
+                    })
+                    const userData = await response.json();
+                    setCurrentProfile(userData.data)
+                    setIsLoggedIn(true);
+                    console.log(userData)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            fetchUserData();
+
+            // let profileToggle = document.getElementById('profile-toggle');
+            // profileToggle.classList.remove('hidden');
+            // // console.log(profileToggle);
+            
+            // let loginToggle = document.getElementById('login-toggle');
+            // loginToggle.classList.add('hidden');
+            // // console.log(loginToggle);
+        } else {
+            setIsLoggedIn(false);
+        }
+    },[])
     useEffect(()=>{
         async function fetchProductData () {
             try {
@@ -45,7 +60,7 @@ const App = () => {
             <header>
                 <h1>Drewford's List</h1>
             </header>
-                <Navbar className="nav" 
+                <Navbar isLoggedIn={isLoggedIn} className="nav" 
                 // isHome = {isHome} setIsHome = {setIsHome} 
                 />
                 <Outlet context={{ourProducts, currentProfile}}/>

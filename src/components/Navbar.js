@@ -1,42 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({isHome, setIsHome}) => {
-    // const handleIsHome = (event) => {if (event.target.textContent == 'Home') {
-    //     setIsHome(true) 
-    // } else { setIsHome(false)}}
+const Navbar = ({isLoggedIn}) => {    
+    {/*nav bar as an array, condition for login/out*/}
     return (
         <nav>
             <Link to="/" className="nav">
                 <span className="nav-name">
                     {/* &nbsp = nonbreaking space */}
-                Home</span></Link> |&nbsp;
+                Home</span></Link> {/* |&nbsp;*/}
 
             <Link to="products" className="nav">
                 <span className="nav-name">
-                Products</span></Link> |&nbsp;
+                Products</span></Link> {/* |&nbsp;*/}
 
-                {/* <Link to="createPost" className="nav">
+            {/*ternary to show/hide login/profile */}
+            {
+                isLoggedIn ? 
+                (<Link to="profile" id="profile-toggle">
                 <span className="nav-name">
-                CreatePost</span></Link> |&nbsp; */}
+                    Profile</span></Link>) 
+                    :
+                    (<Link to="login" id="login-toggle">
+                    <span className="nav-name">
+                    Login</span></Link>) 
+            } {/* |&nbsp;*/}
 
             <Link to="about">
                 <span className="nav-name">
-                    About</span></Link> |&nbsp;
+                About</span></Link>
 
-            {/* <Link to="register">
-                <span className="nav-name">
-                    Register</span></Link> |&nbsp; */}
 
-            <Link to="login">
-                <span className="nav-name">
-                    Login</span></Link> |&nbsp;
-
-            <Link to="profile">
-                <span className="nav-name">
-                    Profile</span></Link>
-
-            {/*nav bar as an array, condition for login/out*/}
+            
         </nav>
     )
 };

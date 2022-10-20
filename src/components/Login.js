@@ -1,18 +1,22 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
 
 const Login = () => {
   //figure out how to use the username and pw state from Register
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
   async function formSubmitHandler (event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/register",
+      console.log(username)
+      console.log(password)
+      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/login",
         {
-          method: "POST",
+          method: "POST", 
           headers: {
-            'Content-type': 'application/json'
+            "Content-Type": 'application/json'
           },
           body: JSON.stringify({
             user: {
@@ -21,10 +25,13 @@ const Login = () => {
             }
           })
         }) 
+        console.log('after fetch')
         const data = await response.json();
+        console.log(data);
         if (data.success){
           localStorage.setItem("token", data.data.token)
-          navigate('/products') };
+          navigate('/products');
+        }
               // console.log(data);
     } catch (error) {
       console.log(error);
