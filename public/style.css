@@ -15,9 +15,17 @@ body {
     background-repeat: no-repeat; */
 }
 
-a {
+header a {
+    color: white;
+}
+
+nav a {
     color: #0162bc;
     text-decoration: none;
+}
+
+a {
+    color: #0162bc;
 }
 
 header {

@@ -58,7 +58,7 @@ const App = () => {
     return (
         <div> 
             <header>
-                <h1>Drewford's List</h1>
+                <h1><a href="https://drewfordslist.netlify.app">Drewford's List</a></h1>
             </header>
                 <Navbar isLoggedIn={isLoggedIn} className="nav" 
                 // isHome = {isHome} setIsHome = {setIsHome} 
