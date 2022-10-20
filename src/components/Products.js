@@ -3,7 +3,7 @@ import {useOutletContext, Link} from "react-router-dom";
 // import React from "react";
 
 const Products = () => {
-    const ourProducts = useOutletContext(); //<--- new
+    const {ourProducts} = useOutletContext(); //<--- new
     // console.log(ourProducts);
     //destructure data from api, use curly braces above
 
@@ -24,14 +24,13 @@ const Products = () => {
                         </div>
                     }) : <p>No products to display at this time.<br></br><br></br> SEE YOU SPACE COWBOY... </p>
             } 
-            
             </div>
-            <div className="new-post-container">
+            {/* <div className="new-post-container">
                 <p>Create a listing</p>
                 <input type="text" placeholder="item name"></input><br />
                 <input type="num" placeholder="$price"></input><br />
                 <input type="text" placeholder="description"></input>
-            </div>
+            </div> */}
         </div>
     )
 };

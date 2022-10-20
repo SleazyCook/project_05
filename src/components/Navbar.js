@@ -16,6 +16,10 @@ const Navbar = ({isHome, setIsHome}) => {
                 <span className="nav-name">
                 Products</span></Link> |&nbsp;
 
+                <Link to="createPost" className="nav">
+                <span className="nav-name">
+                CreatePost</span></Link> |&nbsp;
+
             <Link to="about">
                 <span className="nav-name">
                     About</span></Link> |&nbsp;

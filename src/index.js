@@ -9,7 +9,8 @@ import Register from "./components/Register";
 import Details from "./components/Details";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
-import Login from "./components/Login"
+import Login from "./components/Login";
+import CreatePost from "./components/CreatePost";
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login />
+            },
+            {
+                path: "createPost",
+                element: <CreatePost />
             }
         ]
     }

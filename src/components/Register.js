@@ -1,10 +1,11 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     // create some state, might need multiple to hold username/pw/etc
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
+    const navigate = useNavigate()
     async function formSubmitHandler (event) {
         event.preventDefault();
         try {
@@ -24,8 +25,11 @@ const Register = () => {
                 }
             )
             const data = await response.json();
-            console.log("This is our translated data: ", data)
-            localStorage.setItem("token", data.data.token)
+            if (data.success){
+                localStorage.setItem("token", data.data.token)
+                navigate('/products');
+            }
+            // console.log("This is our translated data: ", data)
         } catch (error) {
             console.log(error);
         }

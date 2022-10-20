@@ -5,14 +5,26 @@ import {Outlet } from "react-router-dom";
 
 const App = () => {
     const [ourProducts, setOurProducts] = useState([]);
-    const [isHome, setIsHome] = useState(true);
-    // useEffect(() =>{
-    //     if (window.location.pathname == "/") {
-    //         setIsHome(true);
-    //     } else {
-    //         setIsHome(false);
+    const [currentProfile, setCurrentProfile] = useState({});
+    //useEffect, if there is a token in local storage, then run GET route /users/me
+    // useEffect (()=> {
+    //     if (token) {
+    //         async function fetchUserData () {
+    //             try {
+    //                 const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me", 
+    //                 {
+    //                     headers: {
+    //                         'Content-Type': 'application/json',
+    //                         'Authorization': 'Bearer TOKEN_STRING_HERE'
+    //                     },
+    //                 })
+    //                 const userData = await response.json();
+    //             } catch (error) {
+    //                 console.log(error)
+    //             }
+    //         }
     //     }
-    // }, [])
+    // })
     useEffect(()=>{
         async function fetchProductData () {
             try {
@@ -28,23 +40,15 @@ const App = () => {
         }
         fetchProductData();
     }, [])
-    // const handleIsHome = (event) => {
-    //     console.log(event.target)
-    //     if (event.target.textContent == 'Home') {
-    //     setIsHome(true) 
-    // } else { setIsHome(false)}}
     return (
-        <div 
-        // onClick={handleIsHome}
-        >
+        <div> 
             <header>
                 <h1>Drewford's List</h1>
             </header>
                 <Navbar className="nav" 
                 // isHome = {isHome} setIsHome = {setIsHome} 
                 />
-                <Outlet context={ourProducts}/>
-            {/* {isHome == true ? <p>Hello</p> : ''} */}
+                <Outlet context={{ourProducts, currentProfile}}/>
             <footer>
                 <p>Developed by <span id="author">Drewford</span></p>
             </footer>
