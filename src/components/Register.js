@@ -46,7 +46,7 @@ const Register = () => {
     //onSubmit and onChange
     return (
         <div id="register-container">
-            <p> Create your account credentials below:</p>
+            <p className="large-welcome"> Create your account credentials below:</p>
             <form onSubmit={formSubmitHandler}>
                 <label>Enter New Username Here: </label>
                 <input type="text" value={username} onChange={updateUserNameState}></input>
@@ -58,6 +58,7 @@ const Register = () => {
 
                 <button type="submit">Register</button>
             </form>
+            <p>This is so exciting!</p>
         </div>
     )
 }

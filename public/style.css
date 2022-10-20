@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-/* HOMEPAGE - HEADER, NAV, FOOTER ----------------------*/
+/* APP.js - HEADER, NAV, FOOTER, AnchorTags----------------------*/
 body {
     color: white;
     background-color: #1e1e1e;
@@ -62,6 +62,7 @@ footer {
 #welcome-container {
     text-align: center;
     margin-bottom: 3em;
+    padding: 1em;
 }
 
 #welcome {
@@ -73,11 +74,6 @@ footer {
 }
 
 /* Products page------------------------------- */
-#behold {
-    margin: 5px 5px 5px 5px;
-    text-decoration: underline;
-    text-align: center;
-}
 
 .products-page-container {
     /* display: flex; */
@@ -105,7 +101,7 @@ footer {
     padding: 8px;
     margin: 10px;
 }
-
+/* Create Post Page(via Products) */
 .new-post-container {
     /* color: #0162bc; */
     color: white;
@@ -175,6 +171,6 @@ footer {
     /* text-align: center; */
 }
 
-.center {
-    text-align: center;
+.large-welcome {
+    font-size: large;
 }

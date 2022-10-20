@@ -41,8 +41,8 @@ function updatePasswordState(event) {
   }
   return (
     <div className="login-container">
-      <p> Login with you existing account below:</p>
-      <form onSubmit={formSubmitHandler} className="center">
+      <p className="large-welcome"> Login with your existing account below:</p>
+      <form onSubmit={formSubmitHandler}>
         <label>Enter username:</label>
         <input type="text" value={username} onChange={updateUserNameState}></input>
         <br />
@@ -57,22 +57,6 @@ function updatePasswordState(event) {
       <p> Don't have an account? No problem!</p>
       <Link to="/register">Click here for registration</Link>
     </div>
-  //   <div className="login-container">
-  //     <p className="center">Login with existing account</p>
-
-  //     Enter username here: 
-  //     <input type="text" placeholder=
-  //     "username"></input><br />
-
-  //     Enter password here:
-  //     <input type="text" placeholder=
-  //     "password"></input>
-
-  //     <br />
-  //     <button type="submit">
-  //       Submit
-  //     </button>
-  // </div>
   )
 }
 
