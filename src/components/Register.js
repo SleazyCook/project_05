@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import ReactDOM from "react-dom";
 
 const Register = () => {
     // create some state, might need multiple to hold username/pw/etc
@@ -9,13 +8,12 @@ const Register = () => {
     async function formSubmitHandler (event) {
         event.preventDefault();
         try {
-            const response = await fetch('https://strangers-things.heroku.app.com/api/2209-ftb-mt-web-ft/users/register',
+            const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/register",
                 {
-                    //review documentation
                     method: "POST",
+                    mode: "cors",
                     headers: {
-                        "Content-Type": "application/json",
-                        // "Authorization": "Bearer "
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
                         user: {
@@ -34,12 +32,12 @@ const Register = () => {
     }
     function updateUserNameState(event) {
         setUsername(event.target.value)
-        console.log('this is the value of the event target: ', event.target.value);
+        // console.log('this is the value of the event target: ', event.target.value);
     }
 
     function updatePasswordState(event) {
         setPassword(event.target.value)
-        console.log('this is the value of the even target: ', event.target.value);
+        // console.log('this is the value of the even target: ', event.target.value);
     }
     //onSubmit and onChange
     return (

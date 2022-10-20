@@ -7,18 +7,32 @@ const Navbar = ({isHome, setIsHome}) => {
     // } else { setIsHome(false)}}
     return (
         <nav>
-            <Link to="/" className="nav"><span className="nav-name" 
-            // onClick={handleIsHome}
-            >Home</span></Link> |
-            <Link to="products" className="nav"><span className="nav-name" 
-            // onClick={handleIsHome}
-            >Products</span></Link> |
-            <Link to="about"><span className="nav-name" 
-            // onClick={handleIsHome}
-            >About</span></Link> |
-            <Link to="register"><span className="nav-name" 
-            // onClick={handleIsHome}
-            >Register</span></Link> 
+            <Link to="/" className="nav">
+                <span className="nav-name">
+                    {/* &nbsp = nonbreaking space */}
+                Home</span></Link> |&nbsp;
+
+            <Link to="products" className="nav">
+                <span className="nav-name">
+                Products</span></Link> |&nbsp;
+
+            <Link to="about">
+                <span className="nav-name">
+                    About</span></Link> |&nbsp;
+
+            <Link to="register">
+                <span className="nav-name">
+                    Register</span></Link> |&nbsp;
+
+            <Link to="login">
+                <span className="nav-name">
+                    Login</span></Link> |&nbsp;
+
+            <Link to="profile">
+                <span className="nav-name">
+                    Profile</span></Link>
+
+            {/*nav bar as an array, condition for login/out*/}
         </nav>
     )
 };

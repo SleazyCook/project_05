@@ -9,6 +9,7 @@ body {
     justify-content: center;
     /* background-image: url("https://images.pexels.com/photos/3330139/pexels-photo-3330139.jpeg"); */
     background-image: linear-gradient(#addafb, #73c5ff, #5089b2);
+    background-attachment: fixed;
     height: 100vh;
     /* background-size: cover;
     background-repeat: no-repeat; */
@@ -101,6 +102,19 @@ footer {
     margin: 10px;
 }
 
+.new-post-container {
+    /* color: #0162bc; */
+    color: white;
+    font-size: large;
+    background-color: #73c5ff;
+    border: 5px solid white;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    height: 400px;
+    position: sticky;
+    top: 240px;
+}
 /* DETAILS PAGE -------------------------*/
 
 /* #details-container {
@@ -126,16 +140,6 @@ footer {
     text-align: center;
 }
 
-.new-post-container {
-    /* color: #0162bc; */
-    color: white;
-    font-size: large;
-    background-color: #73c5ff;
-    border-left: 5px solid white;
-    padding: 1em;
-    text-align: center;
-}
-
 /* About Page */
 #about-container {
     display: flex;
@@ -153,12 +157,17 @@ footer {
 }
 
 /* Registration Page */
-#register-container {
-    display: flex;
+#register-container, .login-container {
+    /* display: flex; */
     border: 5px solid white;
     border-radius: 5px;
     background-color: #addafb;
     width: 60vw;
     max-width: 1000px;
+    color: #0162bc
     /* text-align: center; */
+}
+
+.center {
+    text-align: center;
 }

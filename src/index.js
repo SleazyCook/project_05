@@ -8,6 +8,8 @@ import Products from "./components/Products";
 import Register from "./components/Register";
 import Details from "./components/Details";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Login from "./components/Login"
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -38,6 +40,14 @@ export const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register />
+            },
+            {
+                path: "profile",
+                element: <Profile />
+            },
+            {
+                path: "login",
+                element: <Login />
             }
         ]
     }

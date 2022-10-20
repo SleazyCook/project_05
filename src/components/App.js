@@ -16,8 +16,10 @@ const App = () => {
     useEffect(()=>{
         async function fetchProductData () {
             try {
-                const response = await fetch("https://strangers-things.herokuapp.com/api/2201-ftb-mt-web-ft/posts");
+                const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts");
+                
                 const productData = await response.json(); 
+                console.log('Iam the response ', productData)
                 setOurProducts(productData.data.posts);
                 // console.log(productData.data.posts)
             } catch (err) {
