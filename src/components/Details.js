@@ -1,7 +1,7 @@
 import { useOutletContext, useParams } from "react-router-dom";
 
 const Details = () => {
-  const ourProducts = useOutletContext();
+  const {ourProducts} = useOutletContext();
   const {id} = useParams();
   const product = ourProducts[id];
   console.log(product);

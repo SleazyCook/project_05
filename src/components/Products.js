@@ -6,17 +6,19 @@ const Products = () => {
     const {ourProducts} = useOutletContext(); //<--- new
     // console.log(ourProducts);
     //destructure data from api, use curly braces above
+    //this is because it is one piece of several pieces of state being passed down from App.js
 
     return (
         <div className="products-page-container">
             
-            <div className="products-container">
-                <div id="searchbar">
-                    <input type="text" placeholder="Search products"></input>
-                    <button type="submit">Search</button>
-                </div>
-                {
-                    ourProducts && ourProducts.length ? ourProducts.map((product, idx) => {
+            
+            <div id="searchbar">
+                <Link to="/createPost">Create Post</Link><br /><br />
+                <input type="text" placeholder="Search products"></input>
+                <button type="submit">Search</button>
+            </div>
+            {
+                ourProducts && ourProducts.length ? ourProducts.map((product, idx) => {
                         // console.log(product.title);
                         return <div className="product" key = {idx}>
                             <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
@@ -24,7 +26,7 @@ const Products = () => {
                         </div>
                     }) : <p>No products to display at this time.<br></br><br></br> SEE YOU SPACE COWBOY... </p>
             } 
-            </div>
+            
             {/* <div className="new-post-container">
                 <p>Create a listing</p>
                 <input type="text" placeholder="item name"></input><br />
