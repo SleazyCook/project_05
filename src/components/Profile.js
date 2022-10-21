@@ -4,11 +4,11 @@ import { useOutletContext } from "react-router-dom";
 
 //waiting 'if token' function in app.js to work
 const Profile = () => {
+    
     const {currentProfile} = useOutletContext()
-    console.log(currentProfile)
     return (
         <div id="profile-container">
-            <p id="profile">
+            <p className="large-welcome">
             {`Hello ${currentProfile.username}`} 
             </p>
             <p>Messages</p>

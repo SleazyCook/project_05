@@ -28,14 +28,6 @@ const App = () => {
                 }
             }
             fetchUserData();
-
-            // let profileToggle = document.getElementById('profile-toggle');
-            // profileToggle.classList.remove('hidden');
-            // // console.log(profileToggle);
-            
-            // let loginToggle = document.getElementById('login-toggle');
-            // loginToggle.classList.add('hidden');
-            // // console.log(loginToggle);
         } else {
             setIsLoggedIn(false);
         }

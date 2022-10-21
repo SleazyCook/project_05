@@ -4,7 +4,7 @@ const Details = () => {
   const {ourProducts} = useOutletContext();
   const {id} = useParams();
   const product = ourProducts[id];
-  console.log(product);
+  //I think I should put the create message POST here
   return (
     <div className="product">
       <p><span className="name-detail"><b>{product.title}</b></span></p>

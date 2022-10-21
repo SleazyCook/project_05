@@ -175,7 +175,7 @@ footer {
 }
 
 /* Registration Page */
-#register-container, .login-container {
+#register-container, .login-container, #profile-container {
     /* display: flex; */
     border: 5px solid white;
     border-radius: 5px;
@@ -192,7 +192,9 @@ footer {
     font-size: large;
 }
 
-/* toggles---------------- */
-.hidden {
-    display: none;
+/*Profile Page -----------------*/
+
+/*see most of profile container above*/
+#profile-container {
+    text-align:left;
 }

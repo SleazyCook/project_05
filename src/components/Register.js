@@ -5,7 +5,7 @@ const Register = () => {
     // create some state, might need multiple to hold username/pw/etc
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     async function formSubmitHandler (event) {
         event.preventDefault();
         try {
