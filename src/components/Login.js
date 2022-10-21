@@ -12,7 +12,7 @@ const Login = () => {
     try {
       console.log(username)
       console.log(password)
-      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/login",
+      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me/login",
         {
           method: "POST", 
           headers: {
@@ -29,7 +29,7 @@ const Login = () => {
         const data = await response.json();
         console.log(data);
         if (data.success){
-          localStorage.setItem("token", data.data.token)
+          localStorage.setItem("token", data.token)
           navigate('/products');
         }
               // console.log(data);

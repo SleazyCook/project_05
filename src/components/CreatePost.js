@@ -12,7 +12,7 @@ const CreatePost = () => {
   async function createNewPost (event) {
     event.preventDefault();
     try {
-      if (!localStorage.getItem("token").length) {
+      if (!localStorage.getItem("token")) {
         alert("You are not logged in.")
         return;
       }

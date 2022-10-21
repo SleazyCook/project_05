@@ -12,7 +12,7 @@ const Navbar = ({isLoggedIn}) => {
 
             <Link to="products" className="nav">
                 <span className="nav-name">
-                Products</span></Link> {/* |&nbsp;*/}
+                Posts</span></Link> {/* |&nbsp;*/}
 
             {/*ternary to show/hide login/profile */}
             {
