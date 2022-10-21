@@ -1,7 +1,7 @@
 import { useOutletContext, useParams } from "react-router-dom";
 
 const Details = () => {
-  const {ourProducts} = useOutletContext();
+  const {productObj: [ourProducts, setOurProducts]} = useOutletContext();
   const {id} = useParams();
   const product = ourProducts[id];
   //I think I should put the create message POST here

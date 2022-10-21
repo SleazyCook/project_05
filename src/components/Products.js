@@ -3,7 +3,7 @@ import {useOutletContext, Link} from "react-router-dom";
 // import React from "react";
 
 const Products = () => {
-    const {ourProducts} = useOutletContext(); //<--- new
+    const {productObj: [ourProducts, setOurProducts]} = useOutletContext(); //<--- new
     // console.log(ourProducts);
     //destructure data from api, use curly braces above
     //this is because it is one piece of several pieces of state being passed down from App.js

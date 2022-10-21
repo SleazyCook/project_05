@@ -22,7 +22,7 @@ const App = () => {
                     const userData = await response.json();
                     setCurrentProfile(userData.data)
                     setIsLoggedIn(true);
-                    console.log(userData)
+                    // console.log(userData)
                 } catch (error) {
                     console.log(error)
                 }
@@ -38,7 +38,7 @@ const App = () => {
                 const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts");
                 
                 const productData = await response.json(); 
-                console.log('Iam the response ', productData)
+                // console.log('I am the response ', productData)
                 setOurProducts(productData.data.posts);
                 // console.log(productData.data.posts)
             } catch (err) {
@@ -55,7 +55,7 @@ const App = () => {
             <Navbar isLoggedIn={isLoggedIn} className="nav" 
             // isHome = {isHome} setIsHome = {setIsHome} 
             />
-            <Outlet context={{ourProducts, currentProfile}}/>
+            <Outlet context={{productObj: [ourProducts, setOurProducts], profileObj: [currentProfile, setCurrentProfile]}}/>
             <footer>
                 <p>Developed by <span id="author">Drewford</span></p>
             </footer>
