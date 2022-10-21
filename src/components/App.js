@@ -52,10 +52,10 @@ const App = () => {
             <header>
                 <h1><a href="https://drewfordslist.netlify.app">Drewford's List</a></h1>
             </header>
-                <Navbar isLoggedIn={isLoggedIn} className="nav" 
-                // isHome = {isHome} setIsHome = {setIsHome} 
-                />
-                <Outlet context={{ourProducts, currentProfile}}/>
+            <Navbar isLoggedIn={isLoggedIn} className="nav" 
+            // isHome = {isHome} setIsHome = {setIsHome} 
+            />
+            <Outlet context={{ourProducts, currentProfile}}/>
             <footer>
                 <p>Developed by <span id="author">Drewford</span></p>
             </footer>
