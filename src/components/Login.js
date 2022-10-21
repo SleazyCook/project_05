@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"
+import { useOutletContext, useNavigate, Link } from "react-router-dom";
+
 
 const Login = () => {
   //figure out how to use the username and pw state from Register
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
+  const {profileObj: [currentProfile, setCurrentProfile]} = useOutletContext();
   async function formSubmitHandler (event) {
     event.preventDefault();
     try {
       console.log(username)
       console.log(password)
-      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me/login",
+      const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/login",
         {
           method: "POST", 
           headers: {
@@ -21,14 +22,14 @@ const Login = () => {
           body: JSON.stringify({
             user: {
               username: username,
-              passowrd: password
+              password: password
             }
           })
-        }) 
-        console.log('after fetch')
-        const data = await response.json();
+        })
+        // console.log('after fetch')
+        const {data} = await response.json();
         console.log(data);
-        if (data.success){
+        if (data.token){
           localStorage.setItem("token", data.token)
           navigate('/products');
         }
@@ -36,6 +37,26 @@ const Login = () => {
     } catch (error) {
       console.log(error);
     }
+    if (localStorage.getItem('token')) {
+      async function fetchUserData () {
+          try {
+              const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me", 
+              {
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'Authorization': `Bearer ${localStorage.getItem('token')}`
+                  },
+              })
+              const userData = await response.json();
+              setCurrentProfile(userData.data)
+              // console.log(currentProfile)
+              // console.log(userData)
+          } catch (error) {
+              console.log(error)
+          }
+      }
+      fetchUserData();
+  }
   }
   function updateUserNameState(event) {
     setUsername(event.target.value)

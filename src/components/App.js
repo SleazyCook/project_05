@@ -21,18 +21,14 @@ const App = () => {
                     })
                     const userData = await response.json();
                     setCurrentProfile(userData.data)
-                    setIsLoggedIn(true);
+                    // console.log(currentProfile)
                     // console.log(userData)
                 } catch (error) {
                     console.log(error)
                 }
             }
             fetchUserData();
-        } else {
-            setIsLoggedIn(false);
         }
-    },[])
-    useEffect(()=>{
         async function fetchProductData () {
             try {
                 const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts");
@@ -46,7 +42,29 @@ const App = () => {
             }
         }
         fetchProductData();
-    }, [])
+    },[])
+    console.log(currentProfile);
+    useEffect(()=> { 
+        if (currentProfile._id){
+            setIsLoggedIn(true)
+        } 
+    }, [currentProfile]);
+    console.log(isLoggedIn);
+    // useEffect(()=>{
+    //     async function fetchProductData () {
+    //         try {
+    //             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts");
+                
+    //             const productData = await response.json(); 
+    //             // console.log('I am the response ', productData)
+    //             setOurProducts(productData.data.posts);
+    //             // console.log(productData.data.posts)
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //     }
+    //     fetchProductData();
+    // }, [])
     return (
         <div> 
             <header>

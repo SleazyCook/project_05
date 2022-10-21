@@ -7,7 +7,7 @@ const Products = () => {
     // console.log(ourProducts);
     //destructure data from api, use curly braces above
     //this is because it is one piece of several pieces of state being passed down from App.js
-
+    const reverseProducts = [...ourProducts].reverse();
     return (
         <div className="products-page-container">
             
@@ -18,7 +18,7 @@ const Products = () => {
                 <button type="submit">Search</button>
             </div>
             {
-                ourProducts && ourProducts.length ? ourProducts.map((product, idx) => {
+                reverseProducts && reverseProducts.length ? reverseProducts.map((product, idx) => {
                         // console.log(product.title);
                         return <div className="product" key = {idx}>
                             <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
