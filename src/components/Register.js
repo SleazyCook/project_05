@@ -53,7 +53,7 @@ const Register = () => {
                 <br />
                 
                 <label>Enter New Password Here: </label>
-                <input type="text" value={password} onChange={updatePasswordState}></input>
+                <input type="password" value={password} onChange={updatePasswordState}></input>
                 <br />
 
                 <button type="submit">Register</button>

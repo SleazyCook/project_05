@@ -76,7 +76,7 @@ function updatePasswordState(event) {
         <br />
 
         <label>Enter password: </label>
-        <input type="text" value={password} onChange={updatePasswordState}></input>
+        <input type="password" value={password} onChange={updatePasswordState}></input>
         <br />
 
         <button type="submit">Login</button>
