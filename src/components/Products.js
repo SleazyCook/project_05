@@ -10,32 +10,34 @@ const Products = () => {
     const reverseProducts = [...ourProducts].reverse();
     return (
         <div className="products-page-container">
-            <div id="searchbar">
-                <Link to="/createPost">
-                    <button className="create-post-bttn">
-                        Create Post
-                    </button>
+            <br />
+            <div className="create-or-search">
+                {/* Create Post */}
+                <Link to="/createPost" className="create-post-bttn-container">
+                <button className="create-post-bttn">
+                    Create Post
+                </button>
                 </Link>
-                <br /><br />
-                <input type="text" placeholder="Search products"></input>
-                <button type="submit">Search</button>
+                {/* Search for a post */}
+                {/* <form className="searchbar">
+                    <div className="search">
+                        <input type="text" className="search" placeholder="Search products"></input>
+                    </div>
+                    <button type="submit">Search</button>
+                </form> */}
+                {/* <br /> */}
             </div>
-            {
-                reverseProducts && reverseProducts.length ? reverseProducts.map((product, idx) => {
-                        // console.log(product.title);
-                        return <div className="product" key = {idx}>
-                            <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
-                            <p><span className="price-detail">{product.price}</span></p>
+            {/* Posts, by most recent */}
+        {
+            reverseProducts && reverseProducts.length ? reverseProducts.map((product, idx) => {
+                    // console.log(product.title);
+                    return <div className="product" key = {idx}>
+                        <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
+                        <p><span className="price-detail">{product.price}</span></p>
                         </div>
-                    }) : <p>No products to display at this time.<br></br><br></br> SEE YOU SPACE COWBOY... </p>
+                    }) : <p>No products to display at this time
+                        <br></br><br></br> SEE YOU SPACE COWBOY... </p>
             } 
-            
-            {/* <div className="new-post-container">
-                <p>Create a listing</p>
-                <input type="text" placeholder="item name"></input><br />
-                <input type="num" placeholder="$price"></input><br />
-                <input type="text" placeholder="description"></input>
-            </div> */}
         </div>
     )
 };

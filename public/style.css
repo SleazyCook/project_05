@@ -21,12 +21,12 @@ header a {
 }
 
 nav a {
-    color: #0162bc;
+    color: #318ce0;
     text-decoration: none;
 }
 
 a {
-    color: #0162bc;
+    color: #318ce0;;
 }
 
 header {
@@ -61,8 +61,7 @@ nav {
 }
 
 .nav-name {
-    /* color: #0162bc; */
-    color: #538fb9;
+    color: #318ce0;
     font-size: x-large;
     /* text-decoration: none; */
 }
@@ -92,22 +91,63 @@ footer {
 }
 
 /* Posts page------------------------------- */
-
-.create-post-bttn {
-    width: 100%;
-    padding: 12px 10px;
-    border: none;
-    font-size: 18px;
-    border-radius: 10px;
-    background-color: #0162bc;
-    color: white;
-}
+/* .create-or-search {
+    border-bottom: 5px solid white;
+} */
 
 .products-page-container {
     /* display: flex; */
     border: 5px solid white;
     border-radius: 5px;
     background-color: #addafb;
+}
+
+.create-post-bttn-container {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.create-post-bttn {
+    width: 90%;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #318ce0;
+    color: white;
+    cursor: pointer;
+}
+
+.searchbar input {
+    font-size: 18px;
+    padding: 5px 20px 0px 5px;
+    border: none;
+    outline: none;
+    background: none
+}
+
+.search {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid  #318ce0;
+    background-color: white;
+    width: 85%;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.searchbar button {
+    width: 25%;
+    margin-left: 280px;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #318ce0;
+    color: white;
+    cursor: pointer;
 }
 
 @media all and (max-width: 800x) {
@@ -130,8 +170,17 @@ footer {
     margin: 10px;
 }
 /* Create Post Page(via Products) */
-
-
+/* see form styling in login */
+.item, .price, .description {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid  #318ce0;
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 35px;
+}
 
 
 /* DETAILS PAGE -------------------------*/
@@ -143,7 +192,7 @@ footer {
 .name-detail {
     font-size: large;
     text-decoration: underline;
-    color: #0162bc;
+    color: #318ce0;
 }
 
 .price-detail {
@@ -152,11 +201,6 @@ footer {
     -webkit-text-stroke-color: black; */
     font-size: large;
     font-weight: bold;
-}
-
-#searchbar {
-    margin: 1em;
-    text-align: center;
 }
 
 /* About Page */
@@ -172,7 +216,7 @@ footer {
 }
 
 #about {
-    color: #0162bc;
+    color: #318ce0;
     font-weight: bold;
     text-align: center;
 }
@@ -186,7 +230,7 @@ footer {
     background-color: #addafb;
     width: 390px;
     /* max-width: 1000px; */
-    color: #0162bc;
+    color: #318ce0;
     text-align: center;
     /* text-align: center; */
 }
@@ -208,7 +252,7 @@ footer {
 .username, .password {
     display: block;
     border-radius: 10px;
-    border: 1px solid  #0162bc;
+    border: 1px solid  #318ce0;
     background-color: white;
     width: 300px;
     padding: 10px;
@@ -222,8 +266,9 @@ footer {
     border: none;
     font-size: 18px;
     border-radius: 10px;
-    background-color: #0162bc;
+    background-color: #318ce0;
     color: white;
+    cursor: pointer;
 }
 
 
