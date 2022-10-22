@@ -13,7 +13,7 @@ const CreatePost = () => {
     event.preventDefault();
     try {
       if (!localStorage.getItem("token")) {
-        alert("You are not logged in.")
+        alert("You must be logged in to create a post. If you do not have an account, proceed to the Registration link witihin the Login Page.")
         return;
       }
       const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts",
@@ -36,7 +36,7 @@ const CreatePost = () => {
       if (data.success){
         navigate('/products');
       }
-      console.log('createPost POST successful')
+      // console.log('createPost POST successful')
     } catch (error) {
       console.log(error);
     }

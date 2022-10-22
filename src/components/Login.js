@@ -28,7 +28,7 @@ const Login = () => {
         })
         // console.log('after fetch')
         const {data} = await response.json();
-        console.log(data);
+        // console.log(data);
         if (data.token){
           localStorage.setItem("token", data.token)
           navigate('/products');

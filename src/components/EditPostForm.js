@@ -3,7 +3,7 @@ import {useOutletContext, useNavigate} from 'react-router-dom';
 
 
 const EditPost = (props) => {
-  console.log(props);
+  // console.log(props);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -13,7 +13,7 @@ const EditPost = (props) => {
 
   function editTitle (event) {
     setTitle(event.target.value)
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
 
   function editPrice (event) {
@@ -27,8 +27,8 @@ const EditPost = (props) => {
   async function submitEdit (event) {
     event.preventDefault();
     try {
-      console.log(title, price, description)
-      console.log(props.product._id);
+      // console.log(title, price, description)
+      // console.log(props.product._id);
       const response = await fetch (`https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts/${props.product._id}`, {
         method: "PATCH",
         headers: {
@@ -45,14 +45,14 @@ const EditPost = (props) => {
       })
       
       const data = await response.json();
-      console.log(data)
+      // console.log(data)
       const otherResponse = await fetch ('https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts')
       const otherData = await otherResponse.json();
-      console.log(otherData)
+      // console.log(otherData)
       setOurProducts(otherData.data.posts);
       navigate('/products')
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
     
   }

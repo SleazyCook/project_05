@@ -43,13 +43,13 @@ const App = () => {
         }
         fetchProductData();
     },[])
-    console.log(currentProfile);
+    // console.log(currentProfile);
     useEffect(()=> { 
         if (currentProfile._id){
             setIsLoggedIn(true)
         } 
     }, [currentProfile]);
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
 
     return (
         <div> 
