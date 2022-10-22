@@ -13,7 +13,7 @@ const Products = () => {
             
             
             <div id="searchbar">
-                <Link to="/createPost">Create Post</Link><br /><br />
+                <Link to="/createPost" className="create-post-link">Create Post</Link><br /><br />
                 <input type="text" placeholder="Search products"></input>
                 <button type="submit">Search</button>
             </div>

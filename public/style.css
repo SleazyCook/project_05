@@ -91,7 +91,11 @@ footer {
     font-size: x-large;
 }
 
-/* Products page------------------------------- */
+/* Posts page------------------------------- */
+
+.create-post-link {
+    font-size: 18px;
+}
 
 .products-page-container {
     /* display: flex; */
@@ -160,6 +164,7 @@ footer {
 
 /* About Page */
 #about-container {
+    font-size: 18px;
     display: flex;
     border: 5px solid white;
     border-radius: 5px;
@@ -175,7 +180,7 @@ footer {
     text-align: center;
 }
 
-/* Registration Page */
+/* Login /Registration Page */
 #register-container, .login-container, #profile-container {
     /* display: flex; */
     border: 5px solid white;
@@ -183,15 +188,49 @@ footer {
     padding: 5px;
     background-color: #addafb;
     width: 390px;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     color: #0162bc;
     text-align: center;
     /* text-align: center; */
 }
 
 .large-welcome {
-    font-size: large;
+    font-size: x-large;
+    /* color: blue;; */
+    
 }
+
+.form input {
+    font-size: 18px;
+    padding: 5px 20px 0px 5px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.username, .password {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid  #0162bc;
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 35px;
+}
+
+.signin-bttn {
+    width: 30%;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #0162bc;
+    color: white;
+    
+}
+
+
 
 /*Profile Page -----------------*/
 
