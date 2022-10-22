@@ -1,11 +1,17 @@
 import React from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
 
 //waiting 'if token' function in app.js to work
 const Profile = () => {
-    
-    const {profileObj: [currentProfile, setCurrentProfile]} = useOutletContext()
+    const {loggedInObj: [isLoggedIn, setIsLoggedIn]} = useOutletContext();
+    const {profileObj: [currentProfile, setCurrentProfile]} = useOutletContext();
+    const navigate = useNavigate();
+    function logMeOut() {
+        setIsLoggedIn(false)
+        localStorage.removeItem('token');
+        navigate('/login')
+    }
     return (
         <div id="profile-container">
             <p className="large-welcome">
@@ -13,7 +19,7 @@ const Profile = () => {
             </p>
             <p>Messages</p>
             <p>Posts</p>
-            <button type="submit">Sign Out</button>
+            <button type="submit" onClick={logMeOut}>Sign Out</button>
         </div>
     )
 }

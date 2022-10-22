@@ -50,21 +50,7 @@ const App = () => {
         } 
     }, [currentProfile]);
     console.log(isLoggedIn);
-    // useEffect(()=>{
-    //     async function fetchProductData () {
-    //         try {
-    //             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts");
-                
-    //             const productData = await response.json(); 
-    //             // console.log('I am the response ', productData)
-    //             setOurProducts(productData.data.posts);
-    //             // console.log(productData.data.posts)
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     }
-    //     fetchProductData();
-    // }, [])
+
     return (
         <div> 
             <header>
@@ -73,7 +59,7 @@ const App = () => {
             <Navbar isLoggedIn={isLoggedIn} className="nav" 
             // isHome = {isHome} setIsHome = {setIsHome} 
             />
-            <Outlet context={{productObj: [ourProducts, setOurProducts], profileObj: [currentProfile, setCurrentProfile]}}/>
+            <Outlet context={{productObj: [ourProducts, setOurProducts], profileObj: [currentProfile, setCurrentProfile], loggedInObj: [isLoggedIn, setIsLoggedIn]}}/>
             <footer>
                 <p>Developed by <span id="author">Drewford</span></p>
             </footer>
