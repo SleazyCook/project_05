@@ -10,10 +10,13 @@ const Products = () => {
     const reverseProducts = [...ourProducts].reverse();
     return (
         <div className="products-page-container">
-            
-            
             <div id="searchbar">
-                <Link to="/createPost" className="create-post-link">Create Post</Link><br /><br />
+                <Link to="/createPost">
+                    <button className="create-post-bttn">
+                        Create Post
+                    </button>
+                </Link>
+                <br /><br />
                 <input type="text" placeholder="Search products"></input>
                 <button type="submit">Search</button>
             </div>

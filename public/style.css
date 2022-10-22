@@ -93,8 +93,14 @@ footer {
 
 /* Posts page------------------------------- */
 
-.create-post-link {
+.create-post-bttn {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
     font-size: 18px;
+    border-radius: 10px;
+    background-color: #0162bc;
+    color: white;
 }
 
 .products-page-container {
@@ -124,19 +130,10 @@ footer {
     margin: 10px;
 }
 /* Create Post Page(via Products) */
-.new-post-container {
-    /* color: #0162bc; */
-    color: white;
-    font-size: large;
-    background-color: #73c5ff;
-    border: 5px solid white;
-    border-radius: 5px;
-    padding: 1em;
-    text-align: center;
-    height: 400px;
-    position: sticky;
-    top: 240px;
-}
+
+
+
+
 /* DETAILS PAGE -------------------------*/
 
 /* #details-container {
@@ -181,7 +178,7 @@ footer {
 }
 
 /* Login /Registration Page */
-#register-container, .login-container, #profile-container {
+#register-container, .login-container, #profile-container, .new-post-container {
     /* display: flex; */
     border: 5px solid white;
     border-radius: 5px;
@@ -227,7 +224,6 @@ footer {
     border-radius: 10px;
     background-color: #0162bc;
     color: white;
-    
 }
 
 
