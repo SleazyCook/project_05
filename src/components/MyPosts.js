@@ -40,17 +40,16 @@ const MyPosts = () => {
   return (
     <div>
       Welcome to My Posts. 
+      {console.log(ourProducts)}
       {
         reverseMyPosts && reverseMyPosts.length ? reverseMyPosts.map((post, idx) => {
           // console.log(product.title);
           return (
             <div key = {idx}>
-
-            {/* <Link to={`/products/${idx}`}> */}
-              {/* <p>{post.title}</p> */}
-              {/* <b>{reverseMyPosts[idx]}</b> */}
-              {console.log(post[0].title)}
             
+            <Link to={`/details/${post._id}`}>
+              <span><b>{post.title}</b></span>
+            </Link>
             
             {/* </Link> */}
 

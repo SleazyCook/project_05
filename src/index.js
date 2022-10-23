@@ -63,6 +63,10 @@ export const router = createBrowserRouter([
             {
                 path: "myPosts",
                 element: <MyPosts />
+            },
+            {
+                path: "details",
+                element: <Details />
             }
         ]
     }
