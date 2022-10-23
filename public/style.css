@@ -301,3 +301,38 @@ footer {
 #profile-container {
     text-align:left;
 }
+
+#hello-username {
+    /* border: 5px solid blue; */
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.profile-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-toolbar {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.profile-content {
+    background-color: white;
+}
+
+.profile-bttn {
+    font-size: 18px;
+    color: white;
+    width: 128px;
+    padding: 10px;
+    background-color:#318ce0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#signout-bttn {
+    background-color: rgb(184, 24, 24);
+}

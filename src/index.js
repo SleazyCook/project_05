@@ -11,6 +11,8 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import CreatePost from "./components/CreatePost";
+import Messages from "./components/Messages";
+import MyPosts from "./components/MyPosts.js";
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -53,6 +55,14 @@ export const router = createBrowserRouter([
             {
                 path: "createPost",
                 element: <CreatePost />
+            },
+            {
+                path: "messages",
+                element: <Messages />
+            },
+            {
+                path: "myPosts",
+                element: <MyPosts />
             }
         ]
     }
