@@ -58,7 +58,7 @@ const EditPost = (props) => {
   }
 
   return (
-    <div className="login-container">
+    <div className="edit-post">
       <p className="large-welcome">Update This Post</p>
       <form className="form" onSubmit={submitEdit}>
         <div className="item">

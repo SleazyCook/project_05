@@ -214,6 +214,20 @@ footer {
     cursor: pointer;
 }
 
+/* Edit Page */
+.edit-post {
+        /* display: flex; */
+        border: 5px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #addafb;
+        width: 360px;
+        /* max-width: 1000px; */
+        color: #318ce0;
+        text-align: center;
+        /* text-align: center; */
+}
+
 /* About Page */
 #about-container {
     font-size: 18px;
