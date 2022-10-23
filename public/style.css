@@ -221,6 +221,21 @@ footer {
     text-align: center;
 }
 
+/* .delete-container {
+    background: red;
+} */
+
+.delete-bttn {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: rgb(184, 24, 24);
+    color: white;
+    cursor: pointer;
+}
+
 /* Login /Registration Page */
 #register-container, .login-container, #profile-container, .new-post-container {
     /* display: flex; */

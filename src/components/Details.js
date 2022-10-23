@@ -1,5 +1,6 @@
 import { useOutletContext, useParams } from "react-router-dom";
-import EditPost from "./EditPostForm.js";
+import EditPost from "./EditPostForm";
+import DeletePost from "./DeletePost";
 import { useState } from 'react';
 
 const Details = () => {
@@ -24,6 +25,8 @@ const Details = () => {
       <button onClick={changeToggleEdit}>Edit</button>
       {/*pass down product to EditPost */}
       { toggleEdit ? < EditPost product = {product} /> : null}
+      {/* <button>Delete</button> */}
+      { toggleEdit ? <DeletePost product = {product} /> : null}
     </div>
   )
 }

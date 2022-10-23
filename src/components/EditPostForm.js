@@ -11,19 +11,6 @@ const EditPost = (props) => {
   const {productObj: [posts, setPosts]} = useOutletContext();
   const {productObj: [ourProducts, setOurProducts]} = useOutletContext();
 
-  function editTitle (event) {
-    setTitle(event.target.value)
-    // console.log(event.target.value);
-  }
-
-  function editPrice (event) {
-    setPrice(event.target.value)
-  }
-
-  function editDescription (event) {
-    setDescription(event.target.value)
-  }
-
   async function submitEdit (event) {
     event.preventDefault();
     try {
@@ -55,6 +42,19 @@ const EditPost = (props) => {
       // console.log(error);
     }
     
+  }
+
+  function editTitle (event) {
+    setTitle(event.target.value)
+    // console.log(event.target.value);
+  }
+
+  function editPrice (event) {
+    setPrice(event.target.value)
+  }
+
+  function editDescription (event) {
+    setDescription(event.target.value)
   }
 
   return (
