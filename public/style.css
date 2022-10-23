@@ -228,6 +228,10 @@ footer {
         /* text-align: center; */
 }
 
+#edit-item, #edit-price, #edit-description {
+    margin-left: 15px;
+}
+
 /* About Page */
 #about-container {
     font-size: 18px;
