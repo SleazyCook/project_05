@@ -21,9 +21,11 @@ const Profile = () => {
 
     function changeToggleMessages () {
         toggleMessages ? setToggleMessages(false) : setToggleMessages(true);
+        toggleMyPosts ? setToggleMyPosts(false) : ""
     }
+
     function changeToggleMyPosts () {
-        toggleMyPosts ? setToggleMyPosts(false) : setToggleMyPosts(true);
+        toggleMyPosts ? setToggleMyPosts(false) : setToggleMyPosts(true), toggleMessages ? setToggleMessages(false) :""
     }
 
     return (
