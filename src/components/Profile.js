@@ -29,7 +29,7 @@ const Profile = () => {
     return (
         <div id="profile-container">
             <div id="hello-username" className="large-welcome">
-                <p> {`Hello ${currentProfile.username}`} </p>
+                <p> {`Hello ${currentProfile.username}`}</p>
             </div>
             <div className="profile-flex-container">
                 {/* Buttons for messages, posts, and sign out */}

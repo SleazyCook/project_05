@@ -7,6 +7,7 @@ const App = () => {
     const [ourProducts, setOurProducts] = useState([]);
     const [currentProfile, setCurrentProfile] = useState({});
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [myPosts, setMyPosts] = useState([]);
     //useEffect, if there is a token in local storage, then run GET route /users/me
     useEffect (()=> {
         if (localStorage.getItem('token')) {

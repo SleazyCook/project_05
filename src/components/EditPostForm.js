@@ -8,7 +8,7 @@ const EditPost = (props) => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
-  const {productObj: [posts, setPosts]} = useOutletContext();
+  // const {productObj: [posts, setPosts]} = useOutletContext();
   const {productObj: [ourProducts, setOurProducts]} = useOutletContext();
 
   async function submitEdit (event) {
@@ -30,8 +30,8 @@ const EditPost = (props) => {
           }
         })
       })
-      
-      const data = await response.json();
+      // console.log(fetch);
+      // const data = await response.json();
       // console.log(data)
       const otherResponse = await fetch ('https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts')
       const otherData = await otherResponse.json();
