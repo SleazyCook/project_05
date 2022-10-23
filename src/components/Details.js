@@ -20,9 +20,9 @@ const Details = () => {
       <p><span className="price-detail">{product.price}</span></p>
       <p>Seller: <span className="seller-detail"></span>{product.author.username}</p>
       <p>Description: <span className="description-detail">{product.description}</span></p>
-      <button type="submit">Contact Seller</button>
-      <br />
-      <button onClick={changeToggleEdit}>Edit</button>
+      <button type="submit" className="details-bttn">Contact Seller</button>
+      <br /><br />
+      <button onClick={changeToggleEdit} className="details-bttn">Edit</button>
       {/*pass down product to EditPost */}
       { toggleEdit ? < EditPost product = {product} /> : null}
       {/* <button>Delete</button> */}
