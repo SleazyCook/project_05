@@ -315,6 +315,17 @@ footer {
 
 /*Profile Page -----------------*/
 
+
+/* My Posts */
+.my-posts-container {
+    background-color: white;
+}
+
+.my-indiv-post {
+    border-bottom: 2px solid #318ce0;
+    font-size: 18px;
+}
+
 /*see most of profile container above*/
 #profile-container {
     text-align:left;
