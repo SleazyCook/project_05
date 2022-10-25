@@ -45,15 +45,21 @@ const MyPosts = () => {
         reverseMyPosts && reverseMyPosts.length ? reverseMyPosts.map((post, idx) => {
           // console.log(product.title);
           return (
-            <div key = {idx}>
-            <div className="my-posts-container">
-              <div className="my-indiv-post">
-                <Link to={`/products/${post._id}`}>
-                  <span><b>{post.title}</b></span>
-                </Link>
+            <div>
+              <div key = {idx}>
+                <div className="my-posts-container">
+                  <div className="my-indiv-post">
+                    <Link to={`/products/${post._id}`}>
+                      <span><b>{post.title}</b></span>
+                    </Link>
+                  </div>
+                  
+                </div>
+                
               </div>
+              
             </div>
-            </div>
+            
           ) 
         }) : <p>No products to display at this time
           <br></br><br></br> 
