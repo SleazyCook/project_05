@@ -13,6 +13,7 @@ import Login from "./components/Login";
 import CreatePost from "./components/CreatePost";
 import Messages from "./components/Messages";
 import MyPosts from "./components/MyPosts.js";
+import Searchbar from "./components/Searchbar";
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement);
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
             {
                 path: "details",
                 element: <Details />
+            },
+            {
+                path: "searchbar",
+                element: <Searchbar />
             }
         ]
     }

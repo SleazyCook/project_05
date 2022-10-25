@@ -138,9 +138,9 @@ footer {
     margin-left: 20px;
 }
 
-.searchbar button {
-    width: 25%;
-    margin-left: 280px;
+.searchbar-button {
+    width: 90%;
+    margin-left: 20px;
     padding: 12px 10px;
     border: none;
     font-size: 18px;

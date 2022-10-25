@@ -1,5 +1,6 @@
 // import React, {useState, useEffect} from "react";
 import {useOutletContext, Link} from "react-router-dom";
+import Searchbar from "./Searchbar";
 // import React from "react";
 
 const Products = () => {
@@ -14,18 +15,14 @@ const Products = () => {
             <div className="create-or-search">
                 {/* Create Post */}
                 <Link to="/createPost" className="create-post-bttn-container">
-                <button className="create-post-bttn">
-                    Create Post
-                </button>
+                    <button className="create-post-bttn">
+                        Create Post
+                    </button>
                 </Link>
-                {/* Search for a post */}
-                {/* <form className="searchbar">
-                    <div className="search">
-                        <input type="text" className="search" placeholder="Search products"></input>
-                    </div>
-                    <button type="submit">Search</button>
-                </form> */}
-                {/* <br /> */}
+                <br />
+                <Link to="/searchbar">
+                    <button className="searchbar-button">Search for Post</button>
+                </Link>
             </div>
             {/* Posts, by most recent */}
         {
