@@ -1,6 +1,5 @@
 // import React, {useState, useEffect} from "react";
 import {useOutletContext, Link} from "react-router-dom";
-import Searchbar from "./Searchbar";
 // import React from "react";
 
 const Products = () => {

@@ -2,7 +2,7 @@ import {useNavigate, useOutletContext} from 'react-router-dom';
 
 
 const DeletePost = (props) => {
-  console.log(props);
+  // console.log(props);
   const {productObj: [ourProducts, setOurProducts]} = useOutletContext();
   const navigate = useNavigate();
   async function deleteThisPost (event) {
