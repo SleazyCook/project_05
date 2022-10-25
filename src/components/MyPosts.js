@@ -48,7 +48,7 @@ const MyPosts = () => {
             <div key = {idx}>
             <div className="my-posts-container">
               <div className="my-indiv-post">
-                <Link to={`/details/${post._id}`}>
+                <Link to={`/products/${post._id}`}>
                   <span><b>{post.title}</b></span>
                 </Link>
               </div>

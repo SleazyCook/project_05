@@ -28,7 +28,7 @@ const Products = () => {
             reverseProducts && reverseProducts.length ? reverseProducts.map((product, idx) => {
                     // console.log(product.title);
                     return <div className="product" key = {idx}>
-                        <Link to={`/products/${idx}`}><span className="name-detail"><b>{product.title}</b></span></Link>
+                        <Link to={`/products/${product._id}`}><span className="name-detail"><b>{product.title}</b></span></Link>
                         <p><span className="price-detail">{product.price}</span></p>
                         </div>
                     }) : <p>No products to display at this time

@@ -4,7 +4,9 @@ const Messages = () => {
   // async function()
   return (
     <div>
-      <p>Hello</p>
+      <p>This is where you would keep your messages</p>
+      {/* <br /> */}
+      <p>...if you had any</p>
     </div>
   )
 }
