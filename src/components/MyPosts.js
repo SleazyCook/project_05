@@ -36,8 +36,7 @@ const MyPosts = () => {
   }, [])
 
 
-
-  return (
+return (
     <div>
       {/* Welcome to My Posts.  */}
       {/* {console.log(ourProducts)} */}
@@ -65,6 +64,7 @@ const MyPosts = () => {
           <br></br><br></br> 
           SEE YOU SPACE COWBOY... </p>
         }
+        <p className="center">*Deleted posts may appear above.*</p>
     </div>
   )
 }

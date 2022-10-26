@@ -326,6 +326,10 @@ footer {
     font-size: 18px;
 }
 
+.center {
+    text-align: center;
+}
+
 /*see most of profile container above*/
 #profile-container {
     text-align:left;
