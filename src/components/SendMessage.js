@@ -28,10 +28,9 @@ const SendMessage = (props) => {
       
       const messageData = await response.json();
       console.log("This is the message data: ", messageData);
-      setOurProducts(otherData.data.posts);
       navigate('/products')
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
     
   }
@@ -42,10 +41,9 @@ const SendMessage = (props) => {
 
   return (
     <div>
-      Send a message :)
       <form onSubmit={sendAMessage}>
-        <input onChange={typeMessage} type="text"></input>
-        <button type="submit">Send</button>
+        <input onChange={typeMessage} className="search" type="text" placeholder="Message"></input>
+        <button type="submit" className="searchbar-button">Send</button>
       </form>
     </div>
   )

@@ -18,7 +18,7 @@ const MyPosts = () => {
         })
   
         const data = await response.json();
-        console.log(data.data.posts);
+        // console.log(data.data.posts);
         setMyPosts(data.data.posts)
         
         // setMyPosts(data);
@@ -40,7 +40,7 @@ const MyPosts = () => {
   return (
     <div>
       {/* Welcome to My Posts.  */}
-      {console.log(ourProducts)}
+      {/* {console.log(ourProducts)} */}
       {
         reverseMyPosts && reverseMyPosts.length ? reverseMyPosts.map((post, idx) => {
           // console.log(product.title);

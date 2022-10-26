@@ -18,10 +18,10 @@ const Searchbar = () => {
       setSearchResults(newArr);
       setNoResults("")
     } else {
-      setNoResults("No results found.")
+      setNoResults(alert(`No results found for ${search}`))
     }
     
-    console.log(newArr);
+    // console.log(newArr);
   }
 
   function searchText(event) {

@@ -11,12 +11,13 @@ const Details = () => {
   const {id} = useParams();
   const reverseProducts = [...ourProducts].reverse();
   const [product, setProduct] = useState({});
+  // const [currentProfile, setCurrentProfile] = useOutletContext({});
 
   useEffect (() => {
     const filteredProducts = ourProducts.filter((singleProduct) => {
       return id === singleProduct._id;
     }) 
-    console.log(filteredProducts)
+    // console.log(filteredProducts)
     setProduct(filteredProducts[0]);
   }, [])
   
@@ -33,10 +34,21 @@ const Details = () => {
   
     return (
       <div className="product">
+        {/* Post Details */}
         <p><span className="name-detail"><b>{product.title}</b></span></p>
         <p><span className="price-detail">{product.price}</span></p>
         <p>Seller: <span className="seller-detail"></span>{product.author.username}</p>
         <p>Description: <span className="description-detail">{product.description}</span></p>
+        {/* Contact User or Edit This Post */}
+
+        {/* attempt at ternary. 
+        {console.log(product)}
+        {{product.author.username} == {currentProfile} ? 
+        return <div>
+          <p>my post</p>
+        </div> : <p>not my post</p>
+        } */}
+
         <button onClick={changeToggleSendMessage} type="submit" className="details-bttn">Contact Seller</button>
         {/* toggle send message content */}
         { toggleSendMessage ? <SendMessage product = {product} /> : null}
