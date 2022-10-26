@@ -21,7 +21,7 @@ const SendMessage = (props) => {
         },
           body: JSON.stringify({
             message: {
-              content: ""
+              content: `${messageText}`
             }
           })
       })
