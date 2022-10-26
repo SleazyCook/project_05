@@ -1,4 +1,5 @@
 import { useOutletContext, useParams } from "react-router-dom";
+import SendMessage from "./SendMessage";
 import EditPost from "./EditPostForm";
 import DeletePost from "./DeletePost";
 import { useState, useEffect } from 'react';
@@ -6,6 +7,7 @@ import { useState, useEffect } from 'react';
 const Details = () => {
   const {productObj: [ourProducts, setOurProducts]} = useOutletContext();
   const [toggleEdit, setToggleEdit] = useState(false);
+  const [toggleSendMessage, setToggleSendMessage] = useState(false);
   const {id} = useParams();
   const reverseProducts = [...ourProducts].reverse();
   const [product, setProduct] = useState({});
@@ -21,6 +23,11 @@ const Details = () => {
   function changeToggleEdit () {
     toggleEdit ? setToggleEdit(false) : setToggleEdit(true);
   }
+
+  function changeToggleSendMessage () {
+    toggleSendMessage ? setToggleSendMessage(false) : setToggleSendMessage(true);
+  }
+
   if (product._id) {
     
   
@@ -30,7 +37,9 @@ const Details = () => {
         <p><span className="price-detail">{product.price}</span></p>
         <p>Seller: <span className="seller-detail"></span>{product.author.username}</p>
         <p>Description: <span className="description-detail">{product.description}</span></p>
-        <button type="submit" className="details-bttn">Contact Seller</button>
+        <button onClick={changeToggleSendMessage} type="submit" className="details-bttn">Contact Seller</button>
+        {/* toggle send message content */}
+        { toggleSendMessage ? <SendMessage product = {product} /> : null}
         <br /><br />
         <button onClick={changeToggleEdit} className="details-bttn">Edit</button>
         {/*pass down product to EditPost */}

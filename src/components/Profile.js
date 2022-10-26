@@ -2,7 +2,7 @@ import React from "react";
 // import Messages from "/Messages"
 import { useOutletContext, useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-import Messages from "./Messages";
+import MyMessages from "./MyMessages";
 import MyPosts from "./MyPosts";
 
 
@@ -48,7 +48,7 @@ const Profile = () => {
                 </div>
                 {/* Messages and Posts appear Here */}
                 <div className="profile-content">
-                    { toggleMessages ? <Messages /> : null}
+                    { toggleMessages ? <MyMessages /> : null}
                     { toggleMyPosts ? <MyPosts /> : null}
                 </div>
             </div>

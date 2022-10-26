@@ -11,7 +11,8 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import CreatePost from "./components/CreatePost";
-import Messages from "./components/Messages";
+import SendMessage from "./components/SendMessage";
+import MyMessages from "./components/MyMessages";
 import MyPosts from "./components/MyPosts.js";
 import Searchbar from "./components/Searchbar";
 
@@ -58,8 +59,12 @@ export const router = createBrowserRouter([
                 element: <CreatePost />
             },
             {
-                path: "messages",
-                element: <Messages />
+                path: "sendMessage",
+                element: <SendMessage />
+            },
+            {
+                path: "myMessages",
+                element: <MyMessages />
             },
             {
                 path: "myPosts",

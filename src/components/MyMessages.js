@@ -1,6 +1,6 @@
 import React from "react";
 
-const Messages = () => {
+const MyMessages = () => {
   // async function()
   return (
     <div>
@@ -11,4 +11,4 @@ const Messages = () => {
   )
 }
 
-export default Messages;
+export default MyMessages;
